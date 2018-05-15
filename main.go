@@ -112,7 +112,7 @@ func main() {
 	cmd.Stderr = os.Stderr
 	check(cmd.Start())
 
-	fmt.Fprintf(in, "digraph {\n")
+	fmt.Fprintf(in, "digraph {\nnode[shape=box,width=3,height=1];\noverlap=false;\nranksep=3;\nsplines=true;\n\n")
 	keys := keys()
 	for p, i := range keys {
 		fmt.Fprintf(in, "\tN%d [label=%q,shape=box];\n", i, p)
